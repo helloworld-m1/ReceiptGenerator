@@ -38,7 +38,7 @@ namespace ReceiptGenerator.Crypto
             {
                 do
                 {
-                    rng.GetBytes(priv); // 必须在循环里填充
+                    rng.GetBytes(priv);
                 } while (!IsValidSecp256k1PrivateKey(priv));
             }
             return new EthECKey(priv, true);
